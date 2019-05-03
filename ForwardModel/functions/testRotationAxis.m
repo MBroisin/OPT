@@ -1,0 +1,24 @@
+clc
+clear
+close all
+
+addpath(genpath('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D'));
+addpath(genpath('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D/ForwardModel'));
+addpath(genpath('./functions'));
+
+cd('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D/ForwardModel/');
+
+im256 = mean(imread('./../../../../lena.jpg'), 3);
+im = im256-min(im256, [], 'all');
+im = im/max(im, [], 'all');
+
+x0 = 100.5;
+y0 = 10.5;
+
+rotated_image = image_rotation(im, 45, [x0, y0]);
+
+display = insertMarker(rotated_image, size(rotated_image)/2);
+% display = insertMarker(display,[y0 x0],'x','color','red','size',10);
+
+figure()
+imshow(display)

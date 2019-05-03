@@ -6,22 +6,23 @@ addpath(genpath('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D'));
 addpath(genpath('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D/ForwardModel'));
 addpath(genpath('./functions'));
 
+cd('/Users/Matthieu/Documents/OPT2019/code/Matlab/Projection2D/ForwardModel/');
+
 file = load('artificial_image_modified.mat');
 image = file.image;
 
-angles = linspace(1, 360, 4)*pi/180;
+angles = linspace(1, 360, 180);
 
 tic;
-proj = compute_OPT_projections(image, angles, (125*1e-6)*2*0.027, 6*1e-6, 5/300*(1e-3));
-% proj = compute_OPT_projections(image, angles, 1, 1, 1);
+proj = compute_OPT_projections_v2(image, angles, (125*1e-6)*2*0.027, 6*1e-6, 5/300*(1e-3), [100, 100]);
 
 timeElapsed = toc;
-% disp(['Elapsed time : ' num2str(timeElapsed) ' s']);
 
+disp('--- Projections computation complete ---')
 %%
 
 image = proj;
-save('proj3D_modified.mat', 'image');
+save('proj3D_rotation_axis_modified.mat', 'image');
 
 %% 
 

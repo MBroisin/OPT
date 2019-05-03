@@ -33,6 +33,6 @@ Trull, A. K., van der Horst, J., van Vliet, L. J., & Kalkman, J. (2018). Compari
 Trull, A. K., van der Horst, J., Palenstijn, W. J., van Vliet, L. J., van Leeuwen, T., & Kalkman, J. (2017). Point spread function based image reconstruction in optical projection tomography. Physics in Medicine & Biology, 62(19), 7784. ([Paper link](https://iopscience.iop.org/article/10.1088/1361-6560/aa8945/meta))
 
 
-## Help and properties
+## Help and property
 
 This repository is provided by the Biomedical Imaging Group ([BIG](http://bigwww.epfl.ch/)) of EPFL. If you have any questions or remarks, please do not hesitate to reach me on matthieu.broisin@epfl.ch .
